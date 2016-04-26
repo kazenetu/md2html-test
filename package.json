@@ -1,0 +1,17 @@
+{
+	"name": "md2html-test",
+	"version": "1.0.0",
+	"description": "Test of converting text to html.",
+	"author": "kazenetu",
+	"url": "https://github.com/kazenetu/md2html-test",
+	"license": "MIT License",
+	"keywords": [
+		"gulp-markdown",
+		"gulp-pug"
+	],
+	"devDependencies":{
+		"gulp": "*",
+		"gulp-markdown": "*",
+		"gulp-pug":"*"
+	}
+}
