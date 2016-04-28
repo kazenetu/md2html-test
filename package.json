@@ -1,6 +1,6 @@
 {
 	"name": "md2html-test",
-	"version": "1.0.1",
+	"version": "1.1.0",
 	"description": "Test of converting text to html.",
 	"author": "kazenetu",
 	"url": "https://github.com/kazenetu/md2html-test",
@@ -12,6 +12,7 @@
 	"devDependencies":{
 		"gulp": "*",
 		"gulp-markdown": "*",
+		"emoji-parser":"*",
 		"gulp-pug":"*",
 		"gulp-tap":"*",
 		"path":"*",

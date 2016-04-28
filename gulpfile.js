@@ -1,5 +1,7 @@
 var gulp = require('gulp');
 var markdown = require('gulp-markdown');
+var emojiParser = require('emoji-parser');
+var marked = require('marked');
 var pug = require('gulp-pug');
 var tap = require('gulp-tap');
 var path = require('path');
@@ -21,7 +23,12 @@ gulp.task('default',['_default'], function () {
 });
 
 gulp.task('_default', function () {
+    var renderer = new marked.Renderer();
+    renderer.text = function(text) {
+      return emojiParser.parse(text, './emojis');
+    };
+
     return gulp.src('./sample-md/*.md')
-        .pipe(markdown())
+        .pipe(markdown({renderer:renderer}))
         .pipe(gulp.dest('./temp'));
 });
